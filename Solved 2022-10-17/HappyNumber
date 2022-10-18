@@ -1,0 +1,11 @@
+def happy(n):
+    slow, fast = n, n
+    while True:
+        slow = digitSquare(slow)
+        fast = digitSquare(fast)
+        fast = digitSquare(fast)
+        if slow == 1 or fast == 1:
+            return True
+
+        if slow == fast:
+            return False
