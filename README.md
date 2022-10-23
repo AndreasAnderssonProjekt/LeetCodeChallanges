@@ -1,1 +1,1 @@
-The  sole purpose of this repository is to train my coding ability by completing daily exercises found on LeetCode.com.
+The  sole purpose of this repository is to support my daily habit of completing daily programming exercises found on LeetCode.com.
