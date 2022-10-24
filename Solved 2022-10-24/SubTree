@@ -1,0 +1,15 @@
+def isSubtree(root, subRoot):
+         
+        if isSame(root, subRoot):
+            return True
+                
+        if root:
+            return isSubtree(root.left, subRoot) or isSubtree(root.right, subRoot)
+        
+    
+    
+    def isSame(self, root1, root2):
+        if root1 and root2:
+            return root1.val == root2.val and isSame(root1.left, root2.left) and isSame(root1.right, root2.right)
+        
+        return not root1 and not root2
