@@ -2,6 +2,9 @@ class MaxHeap():
     def __init__(self):
         self.l = []
 
+    def getHeap(self):
+        return self.l
+
     def getMax(self):
         return self.l[0]
 
@@ -27,14 +30,14 @@ class MaxHeap():
         n = len(self.l)
 
         if left_child < n and self.l[left_child] > self.l[largest]:
-            smallest = left_child
+            largest = left_child
 
         if right_child < n and self.l[right_child] > self.l[largest]:
-            smallest = right_child
+            largest = right_child
 
-        if i != smallest:
-            self.swap(smallest, i)
-            self.heapify(smallest)
+        if i != largest:
+            self.swap(largest, i)
+            self.heapify(largest)
 
     def swap(self, i, j):
         tmp = self.l[i]
